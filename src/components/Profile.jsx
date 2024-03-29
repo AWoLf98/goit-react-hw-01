@@ -1,19 +1,19 @@
-// import css from './Profile.module.css';
+import css from './Profile.module.css';
 
 export default function Profile({ name, tag, location, image, stats }) {
   return (
-    <div>
-      <img src={image} alt={name} />
-      <p>{name}</p>
-      <p>{`@${tag}`}</p>
-      <p>{location}</p>
-      <ul>
+    <div className={css.profile}>
+      <img className={css['profile-img']} src={image} alt={name} width='100' height='100'/>
+      <p className={css['profile-name']}>{name}</p>
+      <p className={css['profile-tag']}>{`@${tag}`}</p>
+      <p className={css['profile-location']}>{location}</p>
+      <ul className={css['profile-data']}>
         {Object.entries(stats).map(([key, value]) => {
           console.log([key, value]);
           return (
-            <li key={tag + key}>
-              <span>{key}</span>
-              <span>{value}</span>
+            <li className={css['profile-data-item']} key={tag + key}>
+              <span className={css['profile-data-key']}>{key}</span>
+              <span className={css['profile-data-value']}>{value}</span>
             </li>
           );
         })}
@@ -23,7 +23,7 @@ export default function Profile({ name, tag, location, image, stats }) {
 }
 
 function consoleW(stats) {
-    Object.entries(stats).map(([key, value]) => {
+  Object.entries(stats).map(([key, value]) => {
     console.log([key, value]);
   });
 }
