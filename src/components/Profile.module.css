@@ -32,6 +32,7 @@
   justify-content: space-around;
   border-top: 1px solid gray;
 }
+
 .profile-data-item {
   display: flex;
   flex-direction: column;
@@ -48,6 +49,7 @@
   composes: profile-name;
   text-transform: capitalize;
 }
+
 .profile-data-value {
   composes: profile-tag;
 }

@@ -9,7 +9,6 @@ export default function Profile({ name, tag, location, image, stats }) {
       <p className={css['profile-location']}>{location}</p>
       <ul className={css['profile-data']}>
         {Object.entries(stats).map(([key, value]) => {
-          console.log([key, value]);
           return (
             <li className={css['profile-data-item']} key={tag + key}>
               <span className={css['profile-data-key']}>{key}</span>
@@ -21,15 +20,3 @@ export default function Profile({ name, tag, location, image, stats }) {
     </div>
   );
 }
-
-function consoleW(stats) {
-  Object.entries(stats).map(([key, value]) => {
-    console.log([key, value]);
-  });
-}
-
-consoleW({
-  followers: 5603,
-  views: 4827,
-  likes: 1308,
-});
