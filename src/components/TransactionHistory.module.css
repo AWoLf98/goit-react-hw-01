@@ -1,0 +1,33 @@
+.history {
+  margin: 0 auto;
+  font-size: 16px;
+  border-collapse: collapse;
+}
+
+.history-tittles {
+  background-color: black;
+}
+
+.history-item-type {
+  text-transform: capitalize;
+}
+
+.history-tittles th,
+.history-table td {
+  border: 2px solid black;
+  min-width: 200px;
+  padding: 10px 12px;
+  margin: 0;
+}
+
+.history-table tr {
+  color: black;
+}
+
+.history-table tr:nth-child(2n) {
+  background-color: gray;
+}
+
+.history-table tr:nth-child(2n-1) {
+  background-color: white;
+}

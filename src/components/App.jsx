@@ -2,9 +2,11 @@ import './App.css';
 
 import Profile from './Profile';
 import FriendList from './FriendList';
+import TransactionHistory from  './TransactionHistory';
 
 import userData from '../data/userData';
 import friends from '../data/friends';
+import transactions from  '../data/transactions';
 
 export default function App() {
   return (
@@ -21,6 +23,7 @@ export default function App() {
       <h2>Task 2</h2>
       <FriendList friends={friends} />
       <h2>Task 3</h2>
+      <TransactionHistory items={transactions} />
     </>
   );
 }
